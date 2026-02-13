@@ -1,0 +1,12 @@
+title: RODEO
+description: Vendor-agnostic robotics evaluation platform
+url: ""
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor

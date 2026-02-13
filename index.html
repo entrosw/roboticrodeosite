@@ -1,0 +1,271 @@
+---
+layout: default
+title: RODEO — Vendor-Agnostic Robotics Evaluation Platform
+---
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="container">
+    <a href="#" class="nav-logo"><img src="{{ '/assets/logo.png' | relative_url }}" alt="RODEO" class="nav-logo-img">RODEO<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#why">Why RODEO</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#integrations">Integrations</a></li>
+      <li><a href="#architecture">Architecture</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <img src="{{ '/assets/logo.png' | relative_url }}" alt="RODEO" class="hero-logo">
+    <h1>One platform to evaluate<br><em>every robot</em></h1>
+    <p class="subtitle">
+      RODEO is a vendor-agnostic evaluation platform that lets robotics teams
+      benchmark policies, simulators, and hardware through a single unified interface.
+    </p>
+    <div class="hero-actions">
+      <a href="#quickstart" class="btn btn-primary">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<!-- Why RODEO -->
+<section id="why">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="section-label">Why RODEO</div>
+      <h2 class="section-title">Stop rebuilding evaluation pipelines</h2>
+      <p class="section-desc">
+        Robotics teams waste months wiring up simulators, policy frameworks,
+        and hardware SDKs. RODEO provides the connective tissue so you can
+        focus on what matters: building better robots.
+      </p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">&#x1f504;</div>
+        <h3>Swap anything, change nothing</h3>
+        <p>
+          Move between MuJoCo, Isaac Sim, PyBullet, or real hardware
+          without touching your evaluation code. Vendor lock-in disappears.
+        </p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">&#x1f4ca;</div>
+        <h3>Apples-to-apples comparison</h3>
+        <p>
+          Run the same policy across different simulators and hardware platforms
+          with consistent metrics. Make decisions based on data, not intuition.
+        </p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">&#x26a1;</div>
+        <h3>From sim to real in minutes</h3>
+        <p>
+          Unified data formats and hardware bridges mean policies trained in
+          simulation transfer to physical robots through the same API.
+        </p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">&#x1f50c;</div>
+        <h3>Plugin-first architecture</h3>
+        <p>
+          Every backend, policy framework, and hardware bridge is a plugin.
+          Add your own with a single entry point &mdash; no forks, no patches.
+        </p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">&#x1f3e2;</div>
+        <h3>Lightweight core, optional everything</h3>
+        <p>
+          The core depends only on NumPy, PyArrow, Pydantic, and PyYAML. Install
+          only the backends you need. No 10 GB base install.
+        </p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">&#x1f680;</div>
+        <h3>Production-grade services</h3>
+        <p>
+          FastAPI microservices for simulation, learning, and hardware.
+          Docker-ready. PostgreSQL-backed. Built for teams, not just notebooks.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="section-label">Technical Features</div>
+      <h2 class="section-title">Built for robotics engineers</h2>
+      <p class="section-desc">
+        Protocol-driven design with runtime checking, type safety, and
+        clean separation of concerns across every layer.
+      </p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-item">
+        <h4>Runtime Protocols</h4>
+        <p>
+          All adapters implement runtime-checkable protocols defined
+          in <code>rodeo.contracts</code>. Type errors surface immediately, not in production.
+        </p>
+      </div>
+      <div class="feature-item">
+        <h4>Generic Registry</h4>
+        <p>
+          <code>Registry[T]</code> discovers plugins via Python entry points.
+          Lazy loading, type-safe, with automatic validation on registration.
+        </p>
+      </div>
+      <div class="feature-item">
+        <h4>Canonical Data Schemas</h4>
+        <p>
+          Pydantic v2 schemas for observations, actions, episodes, and metrics.
+          One format across all adapters.
+        </p>
+      </div>
+      <div class="feature-item">
+        <h4>6 Data Adapters</h4>
+        <p>
+          Import and export between native, LeRobot, RLDS, Open X-Embodiment,
+          ROS bags, and CSV. Lossless round-trip conversion.
+        </p>
+      </div>
+      <div class="feature-item">
+        <h4>VLA &amp; Foundation Models</h4>
+        <p>
+          First-class support for Vision-Language-Action models, including
+          HuggingFace Transformers integration and API-based remote inference.
+        </p>
+      </div>
+      <div class="feature-item">
+        <h4>World Model Adapters</h4>
+        <p>
+          Plug in Cosmos, UniSim, or Genie2 for learned world models.
+          Evaluate policies in imagination before committing to sim or hardware.
+        </p>
+      </div>
+      <div class="feature-item">
+        <h4>Microservice Architecture</h4>
+        <p>
+          Simulation, learning, and hardware services run independently.
+          Scale each layer based on your workload.
+        </p>
+      </div>
+      <div class="feature-item">
+        <h4>CLI + API</h4>
+        <p>
+          Full CLI for scripting and automation. REST API for integration
+          with CI/CD, dashboards, and external tools.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Integrations -->
+<section id="integrations">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="section-label">Ecosystem</div>
+      <h2 class="section-title">Integrations out of the box</h2>
+      <p class="section-desc">
+        30+ adapters across simulation, policy, data, hardware, and world models.
+        Each one is a plugin you can extend or replace.
+      </p>
+    </div>
+    <div class="integrations-columns">
+      <div class="integration-group">
+        <h3>Simulators</h3>
+        <div class="integration-tags">
+          <span class="tag">MuJoCo</span>
+          <span class="tag">PyBullet</span>
+          <span class="tag">Isaac Sim</span>
+          <span class="tag">Genesis</span>
+          <span class="tag">Gazebo</span>
+          <span class="tag">LIBERO</span>
+        </div>
+      </div>
+      <div class="integration-group">
+        <h3>Policy Frameworks</h3>
+        <div class="integration-tags">
+          <span class="tag">PyTorch</span>
+          <span class="tag">LeRobot</span>
+          <span class="tag">JAX / Flax</span>
+          <span class="tag">ONNX Runtime</span>
+          <span class="tag">TensorRT</span>
+          <span class="tag">VLA Models</span>
+        </div>
+      </div>
+      <div class="integration-group">
+        <h3>Data Formats</h3>
+        <div class="integration-tags">
+          <span class="tag">Native</span>
+          <span class="tag">LeRobot</span>
+          <span class="tag">RLDS</span>
+          <span class="tag">Open X-Embodiment</span>
+          <span class="tag">ROS Bags</span>
+          <span class="tag">CSV</span>
+        </div>
+      </div>
+      <div class="integration-group">
+        <h3>Hardware</h3>
+        <div class="integration-tags">
+          <span class="tag">ROS 2</span>
+          <span class="tag">Franka</span>
+          <span class="tag">Unitree</span>
+          <span class="tag">Universal Robots</span>
+          <span class="tag">Boston Dynamics</span>
+          <span class="tag">Interbotix</span>
+          <span class="tag">LeRobot HW</span>
+          <span class="tag">Serial</span>
+          <span class="tag">Sim2Real</span>
+        </div>
+      </div>
+      <div class="integration-group">
+        <h3>World Models</h3>
+        <div class="integration-tags">
+          <span class="tag">NVIDIA Cosmos</span>
+          <span class="tag">UniSim</span>
+          <span class="tag">Genie2</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Architecture -->
+<section id="architecture">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <div class="section-label">Architecture</div>
+      <h2 class="section-title">Clean layers, clear boundaries</h2>
+      <p class="section-desc">
+        Every layer depends only on the one below it. Contracts are leaf modules
+        with zero heavy dependencies. Adapters are plugins discovered at runtime.
+      </p>
+    </div>
+    <div class="arch-diagram">
+      <div class="layer">
+        <div class="layer-label">Services</div>
+        <div class="layer-content">FastAPI apps &middot; CLI &middot; REST API &middot; </div>
+      </div>
+      <div class="arrow">&darr;</div>
+      <div class="layer">
+        <div class="layer-label">Domain</div>
+        <div class="layer-content">simulation &middot; learning &middot; platform &middot; hardware &middot; data &middot; db</div>
+      </div>
+      <div class="arrow">&darr;</div>
+      <div class="layer">
+        <div class="layer-label">Adapters</div>
+        <div class="layer-content">sim_adapters &middot; policy_adapters &middot; data_adapters &middot; hw_bridges &middot; world_model_adapters</div>
+      </div>
+
+    </div>
+  </div>
+</section>
